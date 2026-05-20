@@ -38,11 +38,17 @@ frontend/index.html
 
 The frontend talks to the local API at `http://127.0.0.1:8080/api`.
 
+
+https://skill-sphere-os.lovable.app/app
+
+Documentation :- https://skillsphere-os-krn3qxk.gamma.site/
+
 ## Run Tests
 
 ```powershell
 .\scripts\test.ps1
 ```
+https://all-coverd--niharikadave629.replit.app/agents
 
 ## Project Structure
 
