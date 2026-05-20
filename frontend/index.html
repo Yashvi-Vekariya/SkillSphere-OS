@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SkillSphere OS</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">S</div>
+        <div>
+          <strong>SkillSphere OS</strong>
+          <span>Workforce Intelligence</span>
+        </div>
+      </div>
+      <nav>
+        <a href="#overview" class="active">Overview</a>
+        <a href="#assess">Assess</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#audit">Audit</a>
+      </nav>
+      <div class="status">
+        <span class="dot"></span>
+        <span id="apiStatus">Connecting</span>
+      </div>
+    </aside>
+
+    <main>
+      <section class="topbar">
+        <div>
+          <p class="eyebrow">AI Skill Verification Platform</p>
+          <h1>Verify real-world capability with explainable evidence.</h1>
+        </div>
+        <button id="refreshBtn" class="icon-button" title="Refresh data">Refresh</button>
+      </section>
+
+      <section id="overview" class="metrics"></section>
+
+      <section class="grid-two">
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Assessment Console</p>
+              <h2>Run competency check</h2>
+            </div>
+          </div>
+          <form id="assessmentForm" class="form">
+            <label>
+              Learner
+              <select id="learnerSelect" required></select>
+            </label>
+            <label>
+              Competency
+              <select id="competencySelect" required></select>
+            </label>
+            <label>
+              Evidence quality
+              <input id="evidenceQuality" type="range" min="0" max="100" value="86">
+              <span id="qualityValue">86</span>
+            </label>
+            <fieldset id="stepChecklist"></fieldset>
+            <div class="inline-fields">
+              <label>
+                Safety events
+                <input id="safetyEvents" type="number" min="0" value="0">
+              </label>
+              <label class="check">
+                <input id="humanReview" type="checkbox">
+                Human review
+              </label>
+            </div>
+            <button class="primary" type="submit">Create assessment</button>
+          </form>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Live Intelligence</p>
+              <h2>Recent assessments</h2>
+            </div>
+          </div>
+          <div id="assessmentList" class="list"></div>
+        </div>
+      </section>
+
+      <section id="credentials" class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Trust Infrastructure</p>
+            <h2>Verifiable credentials</h2>
+          </div>
+        </div>
+        <div id="credentialList" class="credential-grid"></div>
+      </section>
+
+      <section id="audit" class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">Compliance Automation</p>
+            <h2>Audit trail</h2>
+          </div>
+        </div>
+        <div id="auditLog" class="audit-log"></div>
+      </section>
+    </main>
+
+    <template id="metricTemplate">
+      <article class="metric">
+        <span></span>
+        <strong></strong>
+        <small></small>
+      </article>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
